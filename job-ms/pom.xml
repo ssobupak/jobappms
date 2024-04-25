@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.jobapp</groupId>
-    <artifactId>jobms</artifactId>
+    <artifactId>job-ms</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>jobms</name>
     <description>jobms</description>
