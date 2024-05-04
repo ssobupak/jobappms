@@ -1,5 +1,7 @@
 package org.jobapp.jobms.job;
 
+import org.jobapp.jobms.job.dto.JobWithCompanyDTO;
+import org.jobapp.jobms.job.impl.JobServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,14 +11,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/jobs")
 public class JobController {
-    private final JobService jobService;
+    private final JobServiceImpl jobService;
 
-    public JobController(JobService jobService) {
+    public JobController(JobServiceImpl jobService) {
         this.jobService = jobService;
     }
 
     @GetMapping
-    public ResponseEntity<List<Job>> findAll() {
+    public ResponseEntity<List<JobWithCompanyDTO>> findAll() {
         return ResponseEntity.ok(jobService.findAll());
     };
 
